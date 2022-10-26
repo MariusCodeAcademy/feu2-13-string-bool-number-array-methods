@@ -3,8 +3,6 @@ console.log('arrayHOF.js');
 
 const numArray = [5, 15, -2, 0, -5, 7];
 
-//
-
 for (let sk of numArray) {
   // suksis per visa masyva
   // kiekvieno ciklo metu reiksme lygi sk
@@ -64,3 +62,13 @@ let str1 = 'Brown fox jumped over the lazy dog.';
 str1.split(' ').forEach((word, i, arr) => {
   console.log('word ===', word);
 });
+
+// vidurkis
+// total / kiek yra el
+let total = 0;
+numArray.forEach((sk) => {
+  total = total + sk;
+});
+
+let avg = total / numArray.length;
+console.log('avg ===', +avg.toFixed(2));
