@@ -59,3 +59,8 @@ numArray.forEach((sk, i, arr) => {
 console.log('numArray ===', numArray);
 
 // paskaiciuoti numArray masyvo vidurki
+
+let str1 = 'Brown fox jumped over the lazy dog.';
+str1.split(' ').forEach((word, i, arr) => {
+  console.log('word ===', word);
+});
