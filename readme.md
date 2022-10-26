@@ -23,3 +23,13 @@
     </ul>
     ```
     prideti kiekvienam elementui zodeli 'was ' priekyje `<li>was one</li>`
+
+7. tikrinti ar ivesties laukas htmle atitinka visas salygas. jei neatitinka pranesti apie tai `<small class="feedback"></small>` elemente
+  
+salygos
+```html
+<li>bent viena *</li>
+<li>bent viena skaiciu</li>
+<li>netureti raides @</li>
+<li>nesibaigti su .</li>
+```
