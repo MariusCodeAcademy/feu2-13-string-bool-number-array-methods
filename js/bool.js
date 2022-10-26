@@ -45,3 +45,16 @@ let arr4 = [1, 2, , 'a', 'b'];
 console.log('arr3.toString() ===', arr3.toString());
 console.log('JSON.stringify() ===', JSON.stringify(arr3, null, 2));
 console.log('JSON.stringify() ===', typeof JSON.stringify(arr3, null, 2));
+
+let colors = [];
+
+// kaip patikrinti ar colors yra tuscias?
+if (colors.length) {
+  console.log('colors pilnas');
+} else {
+  console.log('colors tuscias');
+}
+
+let obj5 = {};
+
+console.log("JSON.stringify(obj5) === '{}' ===", JSON.stringify(obj5) === '{}');
