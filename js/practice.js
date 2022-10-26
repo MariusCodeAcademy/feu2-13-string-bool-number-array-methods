@@ -7,7 +7,12 @@ const proverb =
 const htmlEls = {
   h1: document.querySelector('h1'),
   sent1: document.querySelector('#sent1'),
+  vardaiFieldset: document.getElementById('vardaiFieldset'),
+  vardasInput: document.getElementById('vardas'),
+  kiekInput: document.getElementById('kiek'),
+  makeNamesBtn: document.getElementById('makeNamesBtn'),
 };
+// console.log(htmlEls);
 // const h1El = document.querySelector('h1');
 
 function changeH1() {
@@ -30,3 +35,49 @@ changeTextContent(htmlEls.h1, 'methods', 'metodai');
 changeTextContent(htmlEls.sent1, 'until we', 'we just');
 
 function changeTextContent() {}
+
+// 3. sukurti funkcija kuri argumentu
+/**
+ *  Makes h2 element, capitalizes argument and puts it in the body
+ * @param {string} str
+ */
+function makeElCapitalize(str) {
+  const capitalizeStr = str.charAt(0).toUpperCase() + str.slice(1);
+  // console.log('capitalizeStr ===', capitalizeStr);
+  const h2El = document.createElement('h2');
+  h2El.textContent = capitalizeStr;
+  document.body.append(h2El);
+}
+makeElCapitalize('lape');
+makeElCapitalize('monkey');
+
+// pakeisti pirma sesi i 6
+
+function changeFirst6() {
+  const rez = proverb.replace('sesi', 6);
+  console.log('rez ===', rez);
+}
+changeFirst6();
+
+// pakeisti visus sesi i 6
+
+function changeAll6() {
+  let rez = proverb.replace(/sesi /g, '6 ');
+  rez = rez.replace('sesiu', 6);
+  console.log('rezall ===', rez);
+}
+changeAll6();
+
+// 5.  Sukurk du input'us - vieną, kur vartotojas įves savo vardą; kitą -
+
+function makeNames() {
+  console.log('paspaudei');
+
+  // pasiimti reiksmes is name ir kiek
+
+  // jei kiek yra sveikasis skaicius
+  //// spausdina tiek h2 el, koks ivestas sk
+  // else alert kad kazkas negerai
+}
+
+htmlEls.makeNamesBtn.addEventListener('click', makeNames);
