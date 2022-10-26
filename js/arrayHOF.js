@@ -72,3 +72,6 @@ numArray.forEach((sk) => {
 
 let avg = total / numArray.length;
 console.log('avg ===', +avg.toFixed(2));
+
+// iife
+(() => {})();
