@@ -11,6 +11,7 @@ const htmlEls = {
   vardasInput: document.getElementById('vardas'),
   kiekInput: document.getElementById('kiek'),
   makeNamesBtn: document.getElementById('makeNamesBtn'),
+  theOne: document.getElementById('theOne'),
 };
 // console.log(htmlEls);
 // const h1El = document.querySelector('h1');
@@ -81,3 +82,34 @@ function makeNames() {
 }
 
 htmlEls.makeNamesBtn.addEventListener('click', makeNames);
+
+// 6. all the one lis
+
+const allLis = htmlEls.theOne.querySelectorAll('li');
+// const allLis = htmlEls.theOne.children;
+console.log('allLis ===', allLis);
+
+// for of
+// function addWordToLis() {
+//   for (let liEl of allLis) {
+//     changeOneLi(liEl);
+//   }
+// }
+// forEach
+function addWordToLis() {
+  allLis.forEach(changeOneLi);
+}
+addWordToLis();
+
+/**
+ *
+ * @param {HTMLElement} liElement
+ */
+function changeOneLi(liElement, i, arr) {
+  // const nowText = liElement.textContent;
+  // const changedText = `now ${nowText}`;
+  // liElement.textContent = changedText;
+
+  liElement.insertAdjacentText('afterbegin', `${i + 1} was `);
+  // liElement.insertAdjacentText('afterbegin', `${arr.length - i} was `);
+}
